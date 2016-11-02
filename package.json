@@ -1,0 +1,27 @@
+{
+  "name": "Typescript_front",
+  "version": "1.0.0",
+  "description": "Project Four - (front) Rails/Ruby/AngularJS",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RBeneroff/Typescript_front.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RBeneroff/Typescript_front/issues"
+  },
+  "homepage": "https://github.com/RBeneroff/Typescript_front#readme"
+}
