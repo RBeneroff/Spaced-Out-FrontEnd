@@ -13,8 +13,14 @@
   </head>
   <body ng-app='myApp'>
     <!-- <main ng-controller='MainCtrl as main'> -->
+    <nav class='navbar'>
+      <a class='nav-link' ui-sref='home' ui-sref-active='active'>Home</a>
+      <a class='nav-link' ui-sref='profile' ui-sref-active='active'>Profile</a>
+      <a class='nav-link' ui-sref='types' ui-sref-active='active'>All Types</a>
+      <a class='nav-link' ui-sref='login' ui-sref-active='active'>Log In/Log Out</a>
+    </nav>
+
       <h1>Now select a font:</h1>
-      <!-- <jd-fontselect /> -->
       <jd-fontselect stack="myFontStack" />
       <h1 style="font-family: {{myFontStack}};">Look at this font</h1>
     <!-- </main> -->
