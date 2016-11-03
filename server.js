@@ -4,6 +4,7 @@ var express = require('express');
 var path = require('path');
 var logger = require('morgan');
 var app = express();
+var port = process.env.PORT || 4000;
 
 // MIDDLEWARE / CONFIGURATION
 // ==================================
@@ -20,6 +21,6 @@ app.all('/*', function(req, res, next) {
   res.sendFile('/public/index.html', { root: __dirname });
 });
 
-app.listen(4000 || process.env.PORT, function() {
+app.listen(port, function() {
   console.log('listening ---> 4000');
 });
