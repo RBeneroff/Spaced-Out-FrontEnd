@@ -93,6 +93,21 @@
       })
     }
 
+    this.deleteFavorite = function(user_id, fav_font_id) {
+      console.log('user: ', self.user, 'font: ', self.user.fav_fonts);
+      return $http({
+        url: `${rootUrl}/users/${user_id}/fav_fonts/${fav_font_id}`,
+        method: 'DELETE',
+        // data: {fav_font: fontObj}
+      })
+      .then(function(response) {
+        console.log(response);
+      })
+      .catch(function(err) {
+        console.log(err);
+      })
+    }
+
     this.logout = function(user) {
       console.log('logout>>>', user);
       self.user = null;
