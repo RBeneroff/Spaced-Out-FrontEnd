@@ -1,5 +1,19 @@
-<h1>Now select a font:</h1>
+<br>
+<div class='container'>
+<h2>Browse our fonts:</h2>
+<div class='choose-font'>
+<jd-fontselect class='dropdown' state='myStateObject' stack="myFontStack" ng-model='user.favorite'></jd-fontselect>
 
-<jd-fontselect stack="myFontStack"></jd-fontselect>
+<div class='text-container'>
+<p class='example-text' style="font-family: {{myFontStack}};">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies ipsum tortor, quis auctor odio ornare id. Donec blandit felis lectus, viverra malesuada urna aliquam quis. Donec massa massa, egestas at condimentum quis, pharetra a dui. Donec ac leo a justo ullamcorper pulvinar nec at arcu. Etiam pretium cursus magna, nec vulputate orci tincidunt ut. Fusce cursus malesuada ligula at varius. Mauris interdum tempus neque id aliquet.
+<br><br>
+<button type='submit' ng-click='site.addToFavorites(myFontStack, site.user.id)'>Add To Favorites</button>
+</p>
+</div>
+</div>
 
-<h1 style="font-family: {{myFontStack}};">Look at this font</h1>
+<h2 ng-click="site.showFavorites(site.user.id)">Your Favorite Fonts:</h2>
+<ul ng-repeat='font in site.fonts track by $index'>
+  <li style="font-family: {{font.font_family}};">{{font.font_family}}<button ng-click='site.deleteFavorite(site.user.id, site.fonts[$index].id)'>X</button></li>
+</ul>
+</div>
