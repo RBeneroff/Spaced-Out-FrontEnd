@@ -51,6 +51,7 @@
     })
 
     this.showFavorites = function(id) {
+
       console.log(id);
       return $http({
         url: `${rootUrl}/users/${id}/fav_fonts`,
