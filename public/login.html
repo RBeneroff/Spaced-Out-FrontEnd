@@ -18,18 +18,18 @@
   <br><br>
   <h2>Sign up:</h2>
   <div class="row">
-    <form class="col s12" ng-submit="site.signup(user)">
+    <form class="col s12" ng-submit="site.signup(createUser)">
         <div class="input-field col s12">
-          <input id="email" placeholder='Email Address' type="email" class="validate" ng-model="user.email_address">
+          <input id="email" placeholder='Email Address' type="email" class="validate" ng-model="createUser.email_address">
           <!-- <label for="email">Email</label> -->
         </div>
       <div class="input-field col s6">
-        <input id="username" placeholder="Create Username" type="text" class="validate" ng-model="user.username">
+        <input id="username" placeholder="Create Username" type="text" class="validate" ng-model="createUser.username">
         <!-- <label for="username">Create a Username</label> -->
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input id="password" placeholder="Create Password" type="password" class="validate" ng-model="user.password">
+          <input id="password" placeholder="Create Password" type="password" class="validate" ng-model="createUser.password">
           <!-- <label for="password">Password</label> -->
         </div>
       </div>
