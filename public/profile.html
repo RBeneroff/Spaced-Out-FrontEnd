@@ -7,4 +7,7 @@
 
 <button type='submit' ng-click='site.addToFavorites(myFontStack, site.user.id)'>Add To Favorites</button>
 
-{{myFontStack}}
+<h2>Your Favorite Fonts:</h2>
+<ul ng-repeat='fonts in site.fav_font'>
+  <li>{{user.username}}</li>
+</ul>
