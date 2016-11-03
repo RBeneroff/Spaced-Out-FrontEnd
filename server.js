@@ -16,6 +16,10 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
+app.all('/*', function(req, res, next) {
+  res.sendFile('/public/index.html', { root: __dirname });
+});
+
 app.listen(4000, function() {
   console.log('listening ---> 4000');
 });

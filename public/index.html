@@ -16,23 +16,25 @@
     <script src="js/app.js"></script>
   </head>
   <body ng-app='FontsApp'>
-    <header>
-        <div class="navbar-fixed">
-          <nav>
-            <div class="nav-wrapper">
-              <a ui-sref="home" class="brand-logo">Type</a>
-              <ul class="right hide-on-med-and-down">
-              <!-- <li><a class='nav-link' ui-sref='home' ui-sref-active='active'>Home</a></li> -->
-                  <li><a class='nav-link' ui-sref='profile' ui-sref-active='active'>Profile</a></li>
-                  <li><a class='nav-link' ui-sref='types' ui-sref-active='active'>All Types</a></li>
-                  <li><a class='nav-link' ui-sref='login' ui-sref-active='active'>Log In/Log Out</a></li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-    </header>
-      <div ng-controller='SiteController as site'>
+    <div ng-controller='SiteController as site'>
+      <header>
+          <div class="navbar-fixed">
+            <nav>
+              <div class="nav-wrapper">
+                <a ui-sref="home" class="brand-logo">Type</a>
+                <ul class="right hide-on-med-and-down">
+                <!-- <li><a class='nav-link' ui-sref='home' ui-sref-active='active'>Home</a></li> -->
+                    <li><a class='nav-link' ui-sref='types' ui-sref-active='active'>All Types</a></li>
+                    <li ng-show="site.user"><a class='nav-link' ui-sref='profile' ui-sref-active='active'>Profile</a></li>
+                    <li ng-hide="site.user"><a class='nav-link' ui-sref='login' ui-sref-active='active'>Log In</a></li>
+                    <li ng-show="site.user"><a class='nav-link' ng-click="site.logout(site.user)">Log Out</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+      </header>
+      {{site.user}}
         <div ui-view></div>
-      </div>
+    </div>
   </body>
 </html>

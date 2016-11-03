@@ -1,54 +1,36 @@
 <div class="row">
             Log in:
-    <form class="col s12">
+    <form class="col s12" ng-submit="site.login(user)">
       <div class="row">
         <div class="input-field col s6">
-          <input id="username" type="text" class="validate">
+          <input id="username" type="text" class="validate" ng-model="user.username">
           <label for="username">Username</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
+          <input id="last_name" type="text" class="validate" ng-model="user.password">
           <label for="password">Password</label>
         </div>
       </div>
-      <!-- <div class="row">
-        <div class="input-field col s12">
-          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-          <label for="disabled">Disabled</label>
-        </div>
-      </div> -->
-      <div class="row">
+      <button class="btn waves-effect waves-light" type="submit" name="action">Get Started &#xbb;</button>
+    </form>
+  </div>
+  <div class="row">
                   Sign up:
+    <form class="col s12" ng-submit="site.signup(user)">
         <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
+          <input id="email" type="email" class="validate" ng-model="user.email_address">
           <label for="email">Email</label>
         </div>
-      </div>
       <div class="input-field col s6">
-        <input id="username" type="text" class="validate">
+        <input id="username" type="text" class="validate" ng-model="user.username">
         <label for="username">Create a Username</label>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
+          <input id="password" type="password" class="validate" ng-model="user.password">
           <label for="password">Password</label>
         </div>
       </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action">Get Started &#xbb;</button>
     </form>
   </div>
-
-
-<!-- <h3 class='landing'>Login</h3><br>
-<form class="login" ng-submit="auth.login(userObject)" method="post">
-  <input type="text" name="username" placeholder="Username Goes Here" ng-model="userObject.username"><br><br>
-  <input type="password" name="password" placeholder="Password Goes Here" ng-model="userObject.password"><br><br>
-  <button class='nice-button' type="submit" name="login">Login</button>
-</form>
-<br><br>
-<br>
-<h3 class='landing'>Sign Up</h3><br>
-<form class="register" ng-submit="auth.register(userObject)" method="">
-  <input type="text" name="username" placeholder="Create a username!" ng-model="userObject.usernamereg"><br><br>
-  <input type="password" name="password" placeholder="Create your password!" ng-model="userObject.passwordreg"><br><br>
-  <button class='nice-button' type="submit" name="register">Register</button>
-</form> -->
