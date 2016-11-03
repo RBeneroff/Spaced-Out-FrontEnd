@@ -1,6 +1,10 @@
 <h1> Hello: {{site.user.username}}</h1>
 <h1>Now select a font:</h1>
 
-<jd-fontselect stack="myFontStack"></jd-fontselect>
+<jd-fontselect state='myStateObject' stack="myFontStack" ng-model='user.favorite'></jd-fontselect>
 
 <h1 style="font-family: {{myFontStack}};">Look at this font</h1>
+
+<button type='submit' ng-click='site.addToFavorites(myFontStack, site.user.id)'>Add To Favorites</button>
+
+{{myFontStack}}
