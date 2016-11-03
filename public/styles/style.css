@@ -1,3 +1,4 @@
+/*HOME PAGE*/
 .cursor{
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
@@ -29,4 +30,66 @@
   margin:auto;
   padding-top: 20vh;
   text-align: center;
+}
+
+/*PROFILE PAGE*/
+.choose-font {
+  display: flex;
+  /*justify-content: space-around;*/
+  align-items:baseline;
+  padding: 5vh;
+}
+
+.text-container {
+  width: 80%;
+  margin: 0 0 0 7vh;
+  /*padding: 10vh;*/
+}
+
+.example-font {
+  /*width: 90%;*/
+}
+
+.fav {
+  text-align: center;
+}
+
+.dropdown {
+  /*width: 70%;*/
+}
+
+/*LOGIN PAGE */
+
+.container {
+  margin: auto;
+  width: 80%;
+}
+
+/*.profile-name {
+  text-align: center;
+}*/
+
+/*ALL TYPES PAGE*/
+
+.types-flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.user-box {
+  background: black;
+  text-align: center;
+  color: white;
+  width: 100px;
+  height: 50px;
+  margin: 5vh;
+}
+
+.user {
+  margin: auto;
+  padding: 1.5vh;
+}
+
+.user-box:hover {
+  background: gray;
 }

@@ -1,7 +1,10 @@
 <br>
 
 <!-- <button ng-click='site.allProfiles()' type='submit'>button</button> -->
-
+<div class='types-flex'>
 <ul ng-repeat='user in site.users'>
-  <li>{{user.username}}</li>
+  <div class='user-box'>
+    <li class='user'>{{user.username}}</li>
+  </div>
 </ul>
+</div>
