@@ -68,3 +68,28 @@
 /*.profile-name {
   text-align: center;
 }*/
+
+/*ALL TYPES PAGE*/
+
+.types-flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.user-box {
+  background: black;
+  text-align: center;
+  color: white;
+  width: 100px;
+  height: 50px;
+  margin: 5vh;
+}
+
+.user {
+  margin: auto;
+  padding: 1.5vh;
+}
+
+.user-box:hover {
+  background: gray;
+}
