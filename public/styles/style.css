@@ -1,3 +1,4 @@
+/*HOME PAGE*/
 .cursor{
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
@@ -30,3 +31,40 @@
   padding-top: 20vh;
   text-align: center;
 }
+
+/*PROFILE PAGE*/
+.choose-font {
+  display: flex;
+  /*justify-content: space-around;*/
+  align-items:baseline;
+  padding: 5vh;
+}
+
+.text-container {
+  width: 80%;
+  margin: 0 0 0 7vh;
+  /*padding: 10vh;*/
+}
+
+.example-font {
+  /*width: 90%;*/
+}
+
+.fav {
+  text-align: center;
+}
+
+.dropdown {
+  /*width: 70%;*/
+}
+
+/*LOGIN PAGE */
+
+.container {
+  margin: auto;
+  width: 80%;
+}
+
+/*.profile-name {
+  text-align: center;
+}*/

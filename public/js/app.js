@@ -55,11 +55,11 @@
     //   console.log(response);
     // })
 
-    $http.get(`${rootUrl}/users/${id}/fav_fonts`)
-    .then(function(response) {
-      console.log(response);
-      // self.user = response.data.user;
-    })
+    // $http.get(`${rootUrl}/users/${id}/fav_fonts`)
+    // .then(function(response) {
+    //   console.log(response);
+    //   // self.user = response.data.user;
+    // })
 
     this.addToFavorites = function(font, user_id) {
       // self.user = response.data.user;
