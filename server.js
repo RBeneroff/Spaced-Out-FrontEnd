@@ -20,6 +20,6 @@ app.all('/*', function(req, res, next) {
   res.sendFile('/public/index.html', { root: __dirname });
 });
 
-app.listen(4000, function() {
+app.listen(4000 || proccess.env.PORT, function() {
   console.log('listening ---> 4000');
 });
