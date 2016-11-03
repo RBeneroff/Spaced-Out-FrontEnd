@@ -33,7 +33,7 @@
       .then(function(response) {
         console.log(response);
         self.user = response.data.user;
-        var id = self.user.id;
+        self.id = response.data.user.id;
         // console.log(self.user);
         console.log('token >>>', response.data.token);
         localStorage.setItem('token', JSON.stringify(response.data.token))
@@ -50,16 +50,23 @@
       self.users = response.data.users;
     })
 
-    // $http.get(`${rootUrl}/users/${user_id}`)
+    this.showFavorites = function(id) {
+      console.log(id);
+      return $http({
+        url: `${rootUrl}/users/${id}/fav_fonts`,
+        method: 'GET'
+      })
+      .then(function(response) {
+        console.log(response);
+        self.fonts = response.data.fonts;
+      })
+    }
+
+    // $http.get(`${rootUrl}/users/${self.id}/fav_fonts`)
     // .then(function(response) {
     //   console.log(response);
+    //   // self.user = response.data.user;
     // })
-
-    $http.get(`${rootUrl}/users/${id}/fav_fonts`)
-    .then(function(response) {
-      console.log(response);
-      // self.user = response.data.user;
-    })
 
     this.addToFavorites = function(font, user_id) {
       // self.user = response.data.user;

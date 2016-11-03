@@ -7,7 +7,8 @@
 
 <button type='submit' ng-click='site.addToFavorites(myFontStack, site.user.id)'>Add To Favorites</button>
 
-<h2>Your Favorite Fonts:</h2>
-<ul ng-repeat='fonts in site.fav_font'>
-  <li>{{user.username}}</li>
+<h2 ng-click="site.showFavorites(site.user.id)">Your Favorite Fonts:</h2>
+<!-- Dropdown Structure -->
+<ul ng-repeat='font in site.fonts'>
+  <li style="font-family: {{font.font_family}};">{{font.font_family}}</li>
 </ul>
