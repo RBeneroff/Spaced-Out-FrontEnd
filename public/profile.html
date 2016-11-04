@@ -1,3 +1,8 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+</script>
 <br>
 <div class='container'>
 <h2>Browse our fonts:</h2>
@@ -11,9 +16,21 @@
 </p>
 </div>
 </div>
-
-<h2 ng-click="site.showFavorites(site.user.id)">Your Favorite Fonts:</h2>
-<ul ng-repeat='font in site.fonts track by $index'>
-  <li style="font-family: {{font.font_family}};">{{font.font_family}}<button ng-click='site.deleteFavorite(site.user.id, site.fonts[$index].id)'>X</button></li>
-</ul>
 </div>
+
+<!-- <h2 >Your Favorite Fonts:</h2> -->
+  <ul class="collapsible popout" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header" ng-click="site.showFavorites(site.user.id)"><i class="material-icons">star border</i>Favorite Fonts</div>
+      <div class="collapsible-body">
+        <ul ng-repeat='font in site.fonts track by $index'>
+          <li style="font-family: {{font.font_family}};">{{font.font_family}}<div class="chip" style="font-family: Roboto">Delete<i class="close material-icons" ng-click='site.deleteFavorite(site.user.id, site.fonts[$index].id)'>close</i></div></li>
+        </ul>
+      </div>
+    </li>
+    <!-- <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Favorite Fonts</div>
+      <div class="collapsible-body"><p>hi</p></div>
+    </li> -->
+  </ul>
+<!-- </div> -->
