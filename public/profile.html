@@ -47,15 +47,15 @@ See it &#x279C;">
         <div id='dlt-btn'>Delete:</div>
       </div>
         <ul ng-repeat='font in site.fonts track by $index'>
-          <li ng-if='font.user_id == site.user.id' id='icon-padding' style="font-family: {{font.font_family}};">
+          <li n id='icon-padding' style="font-family: {{font.font_family}};">
               <div>{{font.font_family}}</div>
               <div>{{font.category}}</div>
               <div>{{font.origin}}</div>
-            <a id='btn-cont' class="btn-floating btn-small waves-effect waves-light blue-grey lighten-3" ng-click='site.deleteFavorite(site.user.id, site.fonts[$index].id)'><i class="material-icons">close</i></a></li>
+            <a id='btn-cont' class="btn-floating btn-small waves-effect waves-light blue-grey lighten-3" ng-click='site.deleteFavorite(site.user.id, site.fonts[$index].id, $index)'><i class="material-icons">close</i></a></li>
         </ul>
       </div>
     </li>
-
+<!-- g-if='font.user_id == site.user.id' -->
     <li>
       <div class="collapsible-header" ng-click="site.showFavorites(site.user.id)"><i class="material-icons" class="blue-grey lighten-3">star border</i>Favorited Users</i></div>
       <div class="collapsible-body">

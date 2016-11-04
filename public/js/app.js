@@ -5,8 +5,8 @@
   })
   .controller('SiteController', function($http, $state){
     var self = this;
-    var rootUrl = 'http://localhost:3000'
-    // var rootUrl = 'https://spaced-out-backend.herokuapp.com'
+    // var rootUrl = 'http://localhost:3000'
+    var rootUrl = 'https://spaced-out-backend.herokuapp.com'
 
     this.signup = function(user) {
       console.log(user);
@@ -70,8 +70,6 @@
         category: newFont[1].replace(/\s/g, ''),
         origin: newFont[2].replace(/\s/g, ''),
       };
-      console.log(fontObj);
-      console.log('font', newFont);
       return $http({
         url: `${rootUrl}/users/${user_id}/fav_fonts`,
         method: 'POST',
@@ -82,7 +80,9 @@
         return response;
       })
       .then(function(response){
-        self.fonts.push(fontObj)
+        if (response.data.status === 200) {
+        self.fonts.push(fontObj);
+        }
       })
       .catch(function(err) {
         console.log(err);
@@ -92,18 +92,14 @@
     this.deleteFavorite = function(user_id, fav_font_id, index) {
       console.log('user: ', user_id, 'font: ', fav_font_id);
       console.log('index>>', index);
+      self.fonts.splice(index, 1);
       return $http({
         url: `${rootUrl}/users/${user_id}/fav_fonts/${fav_font_id}`,
         method: 'DELETE',
-        // data: {fav_font: fontObj}
       })
       .then(function(response) {
         console.log(response);
         return response;
-      })
-      .then(function(response) {
-        // console.log(self.fonts);
-        self.fonts.splice(index, 1);
       })
       .catch(function(err) {
         console.log(err);
