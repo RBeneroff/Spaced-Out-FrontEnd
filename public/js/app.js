@@ -71,9 +71,20 @@
       })
       .then(function(response){
         console.log(response);
-        self.allfonts = null;
-        self.allfonts = response.data.fonts;
-        console.log(self.allfonts)
+        // self.fonts = {}
+        // for (x = 0; x < response.data.fonts.length; x++) {
+        //   for (var k in self.fonts){
+        //     if (!self.fonts.hasOwnProperty(k)) continue;
+        //     if (self.fonts[k] == response.data.fonts[x].name){
+        //       console.log('here')
+        //     } else {
+        //       self.fonts
+        //     }
+        //   }
+        //   if self.fonts.indexOf(response.data.fonts[x].id) {
+        //     self.push(response.data.fonts[x])
+        //   }
+        // }
       })
     }
 
