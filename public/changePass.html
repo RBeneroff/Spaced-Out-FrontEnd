@@ -1,8 +1,19 @@
-<br><br><br>
-<form ng-submit='site.updatePass(site.user.id, site.newInfo)'>
-  <label for="password">New Password:</label><input type="text" name="password" ng-model="site.newInfo.password"><br>
-  <label for="email_address">New Email:</label><input type="text" name="email_address" ng-model="site.newInfo.email_address">
-  <input type="submit" name="submit" value="Submit">
-</form>
 
+<div class='container'>
+<div class="row">
+    <form class="col s12" ng-submit="site.updatePass(site.user.id, site.newInfo)">
+      <div class="row">
+        <div class="input-field col s12 m6">
+          <input id='input6' type="password" class="validate" ng-model="site.newInfo.password">
+          <label for="username">New Password</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input id='input7' type="text" class="validate" ng-model="site.newInfo.email_address">
+          <label for="password">New Email</label>
+        </div>
+      </div>
+      <button class="waves-effect waves-light blue-grey lighten-3 btn" type="submit" name="action">Update</button>
+    </form>
+  </div>
+</div>
 <div ui-view><div>
