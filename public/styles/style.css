@@ -94,26 +94,35 @@ background: linear-gradient( white , #b0bec5); /* W3C, IE 10+/ Edge, Firefox 16+
   /*width: 90%;*/
 }
 
-.fav-size {
+.font-flex {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.fav {
-  text-align: center;
-}
+/*.fav-size {
+  display: flex;
+  justify-content: space-between;
+}*/
 
 .dropdown {
   /*width: 70%;*/
-  /*padding: 2vh;*/
+  margin: 2vh;
+  /*flex: 2;*/
 }
 
 .font-container {
-  width: 50%;
+  width: 20%;
 }
 
 .size-input {
-  padding: 2vh;
+  margin: 2vh;
+  /*flex: 1;*/
+}
+
+#fav-button {
+  margin: 2vh;
+  /*flex: 1;*/
 }
 
 .example-text {
@@ -140,8 +149,16 @@ background: linear-gradient( white , #b0bec5); /* W3C, IE 10+/ Edge, Firefox 16+
   border: none;
 }
 
+.collapsible-body {
+  background-color: white;
+}
+
 #icon-padding {
   padding: 2vh;
+}
+
+.collapsible {
+  text-align: center;
 }
 
 /*LOGIN PAGE */
