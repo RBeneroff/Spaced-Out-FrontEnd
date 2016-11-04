@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Type App</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="scripts/angular/angular.min.js"></script>
     <script src="scripts/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="scripts/angular-fontselect/dist/libs/webfontloader.js"></script>
@@ -12,8 +13,17 @@
     <link rel="stylesheet" type="text/css" href="scripts/angular-fontselect/dist/angular-fontselect.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-      <script src="js/router.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="js/router.js"></script>
     <script src="js/app.js"></script>
+    <!-- <script type="text/javascript">
+      $(document).ready(function(){
+        $('.collapsible').collapsible();
+      });
+    </script> -->
   </head>
   <body ng-app='FontsApp'>
     <div ng-controller='SiteController as site'>
@@ -21,13 +31,14 @@
           <div class="navbar-fixed">
             <nav>
               <div class="nav-wrapper">
-                <a ui-sref="home" class="brand-logo">Type</a>
-                <ul class="right hide-on-small-only">
+                <a ui-sref="home" class="brand-logo center">Spaced Out</a>
+                <ul class="right">
                   <li class='nav-link' ng-show="site.user">Welcome, {{site.user.username}}</li>
                     <li><a class='nav-link' ui-sref='types' ui-sref-active='active'>All Types</a></li>
                     <li ng-show="site.user"><a class='nav-link' ui-sref='profile' ui-sref-active='active'>Profile</a></li>
                     <li ng-hide="site.user"><a class='nav-link' ui-sref='login' ui-sref-active='active'>Log In</a></li>
                     <li ng-show="site.user"><a class='nav-link' ng-click="site.logout(site.user)">Log Out</a></li>
+                    <!-- <li ng-if='location.path('/profile')'><a ui-sref='profile.changePass' ui-sref-active='active'>Change Your Password</a></li> -->
                 </ul>
               </div>
             </nav>
