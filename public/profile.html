@@ -1,6 +1,8 @@
 <script type="text/javascript">
   $(document).ready(function(){
-    $('.collapsible').collapsible();
+    $('.collapsible').collapsible({
+      accordion: false
+    });
   });
 </script>
 <br>
@@ -19,11 +21,17 @@
 </div>
 
 <!-- <h2 >Your Favorite Fonts:</h2> -->
+<<<<<<< HEAD
   <ul class="collapsible popout" data-collapsible="accordion">
+=======
+<div class="container" class="blue-text text-darken-2">
+  <ul class="collapsible" data-collapsible="accordion">
+>>>>>>> 1fb1a01b1819c22f66d312d734ed123307e6cdd4
     <li>
       <div class="collapsible-header" ng-click="site.showFavorites(site.user.id)"><i class="material-icons">star border</i>Favorite Fonts</div>
       <div class="collapsible-body">
         <ul ng-repeat='font in site.fonts track by $index'>
+<<<<<<< HEAD
           <li ng-if="font.user_id == site.user.id" style="font-family: {{font.font_family}};">{{font.font_family}}<div class="chip" style="font-family: Roboto">Delete<i class="close material-icons" ng-click='site.deleteFavorite(site.user.id, site.fonts[$index].id)'>close</i></div></li>
         </ul>
       </div>
@@ -33,6 +41,21 @@
       <div class="collapsible-body"><p>hi</p></div>
     </li> -->
   </ul>
+=======
+          <li style="font-family: {{font.font_family}};">{{font.font_family}}<div class="chip" style="font-family: Roboto">Delete<i class="close material-icons" ng-click='site.deleteFavorite(site.user.id, site.fonts[$index].id, $index)'>close</i></div></li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <a ui-sref='profile.changePass' class="collapsible-header" ui-sref-active='active'><i class="material-icons">person</i>Change Your Email or Password</a>
+      <!-- <div ui-view class="collapsible-body"></div> -->
+    </li>
+  </ul>
+</div>
+
+<div ui-view></div>
+
+>>>>>>> 1fb1a01b1819c22f66d312d734ed123307e6cdd4
 <!-- </div> -->
 
 <a ui-sref='profile.changePass' ui-sref-active='active'>Change Your Password</a>

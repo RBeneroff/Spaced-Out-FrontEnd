@@ -63,6 +63,7 @@
       })
     }
 
+<<<<<<< HEAD
     this.getAllFonts = function(){
       return $http({
         url: `${rootUrl}/fav_fonts/allfonts`,
@@ -95,10 +96,9 @@
     //   // self.user = response.data.user;
     // })
 
+=======
+>>>>>>> 1fb1a01b1819c22f66d312d734ed123307e6cdd4
     this.addToFavorites = function(font, user_id) {
-      // self.user = response.data.user;
-    //  var newFont = font.replace
-    console.log('user-id', user_id);
       var newFont = font.replace(/['"]+/g, '').split(',');
       var fontObj = {
         font_family: newFont[0],
@@ -114,14 +114,19 @@
       })
       .then(function(response) {
         console.log(response);
+        return response;
+      })
+      .then(function(response){
+        self.fonts.push(fontObj)
       })
       .catch(function(err) {
         console.log(err);
       })
     }
 
-    this.deleteFavorite = function(user_id, fav_font_id) {
-      console.log('user: ', self.user, 'font: ', self.user.fav_fonts);
+    this.deleteFavorite = function(user_id, fav_font_id, index) {
+      console.log('user: ', user_id, 'font: ', fav_font_id);
+      console.log('index>>', index);
       return $http({
         url: `${rootUrl}/users/${user_id}/fav_fonts/${fav_font_id}`,
         method: 'DELETE',
@@ -129,6 +134,11 @@
       })
       .then(function(response) {
         console.log(response);
+        return response;
+      })
+      .then(function(response) {
+        // console.log(self.fonts);
+        self.fonts.splice(index, 1);
       })
       .catch(function(err) {
         console.log(err);
@@ -140,6 +150,14 @@
         url: `${rootUrl}/users/${user_id}`,
         method: 'PATCH',
         data: {pass: newInfo}
+      })
+      .then(function(response) {
+        self.newInfo = {};
+        $state.go('profile', {url: '/profile', user: response.data.user});
+        console.log(response);
+      })
+      .catch(function(err) {
+        console.log(err);
       })
     }
 
