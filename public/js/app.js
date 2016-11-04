@@ -66,12 +66,14 @@
 
     this.getAllFonts = function(){
       return $http({
-        url: `${rootUrl}/users/allfonts`,
+        url: `${rootUrl}/fav_fonts/allfonts`,
         method: 'GET'
       })
       .then(function(response){
         console.log(response);
-        self.allfonts = response.data.users;
+        self.allfonts = null;
+        self.allfonts = response.data.fonts;
+        console.log(self.allfonts)
       })
     }
 
