@@ -24,7 +24,7 @@
       <div class="collapsible-header" ng-click="site.showFavorites(site.user.id)"><i class="material-icons">star border</i>Favorite Fonts</div>
       <div class="collapsible-body">
         <ul ng-repeat='font in site.fonts track by $index'>
-          <li style="font-family: {{font.font_family}};">{{font.font_family}}<div class="chip" style="font-family: Roboto">Delete<i class="close material-icons" ng-click='site.deleteFavorite(site.user.id, site.fonts[$index].id)'>close</i></div></li>
+          <li ng-if="font.user_id == site.user.id" style="font-family: {{font.font_family}};">{{font.font_family}}<div class="chip" style="font-family: Roboto">Delete<i class="close material-icons" ng-click='site.deleteFavorite(site.user.id, site.fonts[$index].id)'>close</i></div></li>
         </ul>
       </div>
     </li>

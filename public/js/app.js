@@ -52,7 +52,6 @@
     })
 
     this.showFavorites = function(id) {
-
       console.log(id);
       return $http({
         url: `${rootUrl}/users/${id}/fav_fonts`,
@@ -70,6 +69,8 @@
         method: 'GET'
       })
       .then(function(response){
+        self.allfonts = response.data.fonts
+        console.log(self.allfonts)
         console.log(response);
         // self.fonts = {}
         // for (x = 0; x < response.data.fonts.length; x++) {
