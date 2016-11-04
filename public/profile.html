@@ -1,6 +1,8 @@
 <script type="text/javascript">
   $(document).ready(function(){
-    $('.collapsible').collapsible();
+    $('.collapsible').collapsible({
+      accordion: false
+    });
   });
 </script>
 
@@ -31,7 +33,7 @@
 
 <!-- <h2 >Your Favorite Fonts:</h2> -->
 <div class="container" class="blue-text text-darken-2">
-  <ul class="collapsible popout" data-collapsible="accordion">
+  <ul class="collapsible" data-collapsible="accordion">
     <li>
       <div class="collapsible-header" ng-click="site.showFavorites(site.user.id)"><i class="material-icons" class="blue-text text-darken-2">star border</i>Favorite Fonts</div>
       <div class="collapsible-body">
@@ -43,12 +45,12 @@
       </div>
     </li>
     <li>
-      <a ui-sref='profile.changePass' class="collapsible-header"><i class="material-icons">person</i>Change Your Email or Password</a>
-      <div ui-view class="collapsible-body"></div>
+      <a ui-sref='profile.changePass' class="collapsible-header" ui-sref-active='active'><i class="material-icons">person</i>Change Your Email or Password</a>
+      <!-- <div ui-view class="collapsible-body"></div> -->
     </li>
   </ul>
 </div>
 
-
+<div ui-view></div>
 
 <!-- </div> -->
