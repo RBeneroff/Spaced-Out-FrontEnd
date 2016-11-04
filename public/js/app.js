@@ -70,8 +70,6 @@
         category: newFont[1].replace(/\s/g, ''),
         origin: newFont[2].replace(/\s/g, ''),
       };
-      console.log(fontObj);
-      console.log('font', newFont);
       return $http({
         url: `${rootUrl}/users/${user_id}/fav_fonts`,
         method: 'POST',
@@ -82,7 +80,9 @@
         return response;
       })
       .then(function(response){
-        self.fonts.push(fontObj)
+        if (response.data.status === 200) {
+        self.fonts.push(fontObj);
+        }
       })
       .catch(function(err) {
         console.log(err);
