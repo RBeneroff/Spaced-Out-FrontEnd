@@ -39,10 +39,18 @@ See it &#x279C;">
     <li>
       <div class="collapsible-header" ng-click="site.showFavorites(site.user.id)"><i class="material-icons" class="blue-grey lighten-3">star border</i>Favorite Fonts</i></div>
       <div class="collapsible-body">
+      <div id='category-name'>
+        <div>Font Family:</div>
+        <div>Category:</div>
+        <div>Origin:</div>
+        <div id='dlt-btn'>Delete:</div>
+      </div>
         <ul ng-repeat='font in site.fonts track by $index'>
-          <li id='icon-padding' style="font-family: {{font.font_family}};">{{font.font_family}}
-
-            <a class="btn-floating btn-small waves-effect waves-light blue-grey lighten-3" ng-click='site.deleteFavorite(site.user.id, site.fonts[$index].id)'><i class="material-icons">close</i></a></li>
+          <li id='icon-padding' style="font-family: {{font.font_family}};">
+              <div>{{font.font_family}}</div>
+              <div>{{font.category}}</div>
+              <div>{{font.origin}}</div>
+            <a id='btn-cont' class="btn-floating btn-small waves-effect waves-light blue-grey lighten-3" ng-click='site.deleteFavorite(site.user.id, site.fonts[$index].id)'><i class="material-icons">close</i></a></li>
         </ul>
       </div>
     </li>
@@ -54,12 +62,12 @@ See it &#x279C;">
     </li>
 
     <!-- <br><br> -->
-    <div class='footer'>
+
     <li>
       <a ui-sref='profile.changePass' class="collapsible-header" ui-sref-active='active'><i class="material-icons">person</i>Change Your Email or Password</a>
       <!-- <div ui-view class="collapsible-body"></div> -->
     </li>
-  </ul></div>
+  </ul>
 <!-- </div> -->
 
 <div ui-view></div>

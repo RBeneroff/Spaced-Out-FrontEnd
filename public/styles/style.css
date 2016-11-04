@@ -149,16 +149,37 @@ background: linear-gradient( white , #b0bec5); /* W3C, IE 10+/ Edge, Firefox 16+
   border: none;
 }
 
-.collapsible-body {
+.collapsible-body,
+#background-pass {
   background-color: white;
 }
 
-#icon-padding {
+/*#icon-padding {
+  padding: 2vh;
+}*/
+
+.collapsible-header {
+  text-align: center;
+}
+
+#icon-padding,
+#category-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   padding: 2vh;
 }
 
-.collapsible {
-  text-align: center;
+/*#font-cont,
+#btn-cont {
+  justify-content: space-between;
+  flex-flow: wrap;
+}*/
+
+#btn-cont,
+#dlt-btn {
+  text-align: right;
+  margin: 0 0 0 60vh;
 }
 
 /*LOGIN PAGE */
@@ -198,3 +219,21 @@ background: linear-gradient( white , #b0bec5); /* W3C, IE 10+/ Edge, Firefox 16+
 }
 
 /*CHANGE PASS PAGE*/
+
+/*ALL TYPES PAGE*/
+#demo {
+  margin: auto;
+  position: relative;
+  height: 700px;
+  width: 700px;
+}
+
+.center {
+  text-align: center;
+}
+
+.popular {
+  background: white;
+  width: 100%;
+  height: 300px;
+}
