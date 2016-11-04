@@ -108,6 +108,14 @@
       })
     }
 
+    this.updatePass = function(user_id, newInfo) {
+      return $http({
+        url: `${rootUrl}/users/${user_id}`,
+        method: 'PATCH',
+        data: {pass: newInfo}
+      })
+    }
+
     this.logout = function(user) {
       console.log('logout>>>', user);
       self.user = null;
