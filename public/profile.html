@@ -25,7 +25,8 @@ See it &#x279C;">
 <jd-fontselect class='blue-grey lighten-5' class='dropdown' state='myStateObject' stack="myFontStack" ng-model='user.favorite'></jd-fontselect>
 <!-- <div class='fav-size'> -->
   <div class='font-container'>
-  <input class='size-input' id='input5' type='number' name='fontSize' min='4' max='72' ng-model='site.fontSize' placeholder='Change Your Font Size' class='white-text'>
+    <label for="password">Change Your Font Size</label>
+  <input class='size-input' id='input5' type='number' name='fontSize' min='4' max='72' ng-model='site.fontSize' class='white-text'>
   </div>
 <button id='fav-button' class="waves-effect waves-light blue-grey lighten-3 btn" type='submit' ng-click='site.addToFavorites(myFontStack, site.user.id)'>Add Font To Favorites</button>
 <!-- </div> -->
@@ -46,7 +47,7 @@ See it &#x279C;">
         <div id='dlt-btn'>Delete:</div>
       </div>
         <ul ng-repeat='font in site.fonts track by $index'>
-          <li id='icon-padding' style="font-family: {{font.font_family}};">
+          <li ng-if='font.user_id == site.user.id' id='icon-padding' style="font-family: {{font.font_family}};">
               <div>{{font.font_family}}</div>
               <div>{{font.category}}</div>
               <div>{{font.origin}}</div>
