@@ -5,38 +5,75 @@
     });
   });
 </script>
-<br>
-<div class='container'>
-<h2>Browse our fonts:</h2>
-  <div class='choose-font'>
-  <jd-fontselect class='dropdown' state='myStateObject' stack="myFontStack" ng-model='user.favorite'></jd-fontselect>
-  <label for='fontSize'>Size: </label><input type='number' name='fontSize' min='4' max='72' ng-model='site.fontSize'>
-  <div class='text-container'>
-    <p class='example-text' style="font-family: {{myFontStack}};font-size:{{site.fontSize}}px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies ipsum tortor, quis auctor odio ornare id. Donec blandit felis lectus, viverra malesuada urna aliquam quis. Donec massa massa, egestas at condimentum quis, pharetra a dui. Donec ac leo a justo ullamcorper pulvinar nec at arcu. Etiam pretium cursus magna, nec vulputate orci tincidunt ut. Fusce cursus malesuada ligula at varius. Mauris interdum tempus neque id aliquet.
-  <button type='submit' ng-click='site.addToFavorites(myFontStack, site.user.id)'>Add To Favorites</button>
-  </p>
-  </div>
-  </div>
+
+<br><br><br>
+
+<!-- <div class='container'> -->
+<h4 class='profile-header'>Browse fonts. Add to Favorites.</h4>
+<div class='choose-font'>
+<div class='text-flex'>
+<textarea class='example-text' ng-model='site.repeatText' placeholder="Write your sample text in here.
+See it &#x279C;">
+</textarea>
+<textarea readonly class='example-text2' style="font-family: {{myFontStack}};font-size:{{site.fontSize}}px" ng-model='site.repeatText'>
+</textarea>
+</div>
 </div>
 
-<!-- <h2 >Your Favorite Fonts:</h2> -->
-<div class="container" class="blue-text text-darken-2">
+<br><br>
+<div class='font-flex'>
+<jd-fontselect class='blue-grey lighten-5' class='dropdown' state='myStateObject' stack="myFontStack" ng-model='user.favorite'></jd-fontselect>
+<!-- <div class='fav-size'> -->
+  <div class='font-container'>
+    <label for="password">Change Your Font Size</label>
+  <input class='size-input' id='input5' type='number' name='fontSize' min='4' max='72' ng-model='site.fontSize' class='white-text'>
+  </div>
+<button id='fav-button' class="waves-effect waves-light blue-grey lighten-3 btn" type='submit' ng-click='site.addToFavorites(myFontStack, site.user.id)'>Add Font To Favorites</button>
+<!-- </div> -->
+</div>
+
+<br><br><br>
+
+<h4 class='profile-header'>Dashboard</h4>
+<!-- <div class="container" class="blue-text text-darken-2"> -->
   <ul class="collapsible" data-collapsible="accordion">
     <li>
-      <div class="collapsible-header" ng-click="site.showFavorites(site.user.id)"><i class="material-icons" class="blue-text text-darken-2">star border</i>Favorite Fonts</div>
+      <div class="collapsible-header" ng-click="site.showFavorites(site.user.id)"><i class="material-icons" class="blue-grey lighten-3">star border</i>Favorite Fonts</i></div>
       <div class="collapsible-body">
+      <div id='category-name'>
+        <div>Font Family:</div>
+        <div>Category:</div>
+        <div>Origin:</div>
+        <div id='dlt-btn'>Delete:</div>
+      </div>
         <ul ng-repeat='font in site.fonts track by $index'>
-          <li style="font-family: {{font.font_family}};">{{font.font_family}}<div class="chip" style="font-family: Roboto">Delete<i class="close material-icons" ng-click='site.deleteFavorite(site.user.id, site.fonts[$index].id, $index)'>close</i></div></li>
+          <li ng-if='font.user_id == site.user.id' id='icon-padding' style="font-family: {{font.font_family}};">
+              <div>{{font.font_family}}</div>
+              <div>{{font.category}}</div>
+              <div>{{font.origin}}</div>
+            <a id='btn-cont' class="btn-floating btn-small waves-effect waves-light blue-grey lighten-3" ng-click='site.deleteFavorite(site.user.id, site.fonts[$index].id)'><i class="material-icons">close</i></a></li>
         </ul>
       </div>
     </li>
+
+    <li>
+      <div class="collapsible-header" ng-click="site.showFavorites(site.user.id)"><i class="material-icons" class="blue-grey lighten-3">star border</i>Favorited Users</i></div>
+      <div class="collapsible-body">
+      </div>
+    </li>
+
+    <!-- <br><br> -->
+
     <li>
       <a ui-sref='profile.changePass' class="collapsible-header" ui-sref-active='active'><i class="material-icons">person</i>Change Your Email or Password</a>
       <!-- <div ui-view class="collapsible-body"></div> -->
     </li>
   </ul>
-</div>
+<!-- </div> -->
 
 <div ui-view></div>
 
 <!-- </div> -->
+
+<!-- <a ui-sref='profile.changePass' ui-sref-active='active'>Change Your Password</a>
+<div ui-view><div> -->
