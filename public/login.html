@@ -1,15 +1,16 @@
+
 <br><div class='container'>
 <h2>Log in:</h2>
 <div class="row">
     <form class="col s12" ng-submit="site.login(user)">
       <div class="row">
-        <div class="input-field col s6">
-          <input id="username" placeholder="Username" type="text" class="validate" ng-model="user.username">
-          <!-- <label for="username">Username</label> -->
+        <div class="input-field col s12 m6">
+          <input id="username" type="text" class="validate" ng-model="user.username">
+          <label for="username">Username</label>
         </div>
-        <div class="input-field col s6">
-          <input id="last_name" placeholder="Password" type="text" class="validate" ng-model="user.password">
-          <!-- <label for="password">Password</label> -->
+        <div class="input-field col s12 m6">
+          <input id="last_name" type="text" class="validate" ng-model="user.password">
+          <label for="password">Password</label>
         </div>
       </div>
       <button class="btn waves-effect waves-light" type="submit" name="action">Start fonting</button>
@@ -20,17 +21,17 @@
   <div class="row">
     <form class="col s12" ng-submit="site.signup(createUser)">
         <div class="input-field col s12">
-          <input id="email" placeholder='Email Address' type="email" class="validate" ng-model="createUser.email_address">
-          <!-- <label for="email">Email</label> -->
+          <input id="email" type="email" class="validate" ng-model="createUser.email_address">
+          <label for="email">Email</label>
         </div>
-      <div class="input-field col s6">
-        <input id="username" placeholder="Create Username" type="text" class="validate" ng-model="createUser.username">
-        <!-- <label for="username">Create a Username</label> -->
+      <div class="input-field col s12 m6">
+        <input id="username" type="text" class="validate" ng-model="createUser.username">
+        <label for="username">Create Username</label>
       </div>
       <div class="row">
-        <div class="input-field col s6">
-          <input id="password" placeholder="Create Password" type="password" class="validate" ng-model="createUser.password">
-          <!-- <label for="password">Password</label> -->
+        <div class="input-field col s12 m6">
+          <input id="password" type="password" class="validate" ng-model="createUser.password">
+          <label for="password">Password</label>
         </div>
       </div>
       <button class="btn waves-effect waves-light" type="submit" name="action">Join Typescript</button>

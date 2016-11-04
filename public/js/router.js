@@ -27,6 +27,10 @@
       url: '/about',
       templateUrl: 'about.html',
     })
+    .state('profile.changePass', {
+      url: '/changePass',
+      templateUrl: 'changePass.html'
+    })
 
     $urlRouterProvider.otherwise('/');
 
