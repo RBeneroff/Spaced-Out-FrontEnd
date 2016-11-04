@@ -63,41 +63,6 @@
       })
     }
 
-<<<<<<< HEAD
-    this.getAllFonts = function(){
-      return $http({
-        url: `${rootUrl}/fav_fonts/allfonts`,
-        method: 'GET'
-      })
-      .then(function(response){
-        self.allfonts = response.data.fonts
-        console.log(self.allfonts)
-        console.log(response);
-        // self.fonts = {}
-        // for (x = 0; x < response.data.fonts.length; x++) {
-        //   for (var k in self.fonts){
-        //     if (!self.fonts.hasOwnProperty(k)) continue;
-        //     if (self.fonts[k] == response.data.fonts[x].name){
-        //       console.log('here')
-        //     } else {
-        //       self.fonts
-        //     }
-        //   }
-        //   if self.fonts.indexOf(response.data.fonts[x].id) {
-        //     self.push(response.data.fonts[x])
-        //   }
-        // }
-      })
-    }
-
-    // $http.get(`${rootUrl}/users/${self.id}/fav_fonts`)
-    // .then(function(response) {
-    //   console.log(response);
-    //   // self.user = response.data.user;
-    // })
-
-=======
->>>>>>> 1fb1a01b1819c22f66d312d734ed123307e6cdd4
     this.addToFavorites = function(font, user_id) {
       var newFont = font.replace(/['"]+/g, '').split(',');
       var fontObj = {
