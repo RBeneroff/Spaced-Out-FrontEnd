@@ -7,7 +7,7 @@ var words = [
   {text: "Gruppo", weight: 6.2},
   {text: "Mogra", weight: 5},
   {text: "Lalezar", weight: 5},
-  {text: "{{site.font-family}}", weight: 7},
+  {text: "Sura", weight: 7},
   {text: "Play", weight: 13},
   {text: "Unlock", weight: 10.5},
   {text: "Quicksand", weight: 9.4},
@@ -31,11 +31,12 @@ $('#demo').jQCloud(words, {
 
 
 
-<!-- <br>
+<!-- <button type="button" name="button" ng-click=site.getAllFonts()></button>
+>>>>>>> eb9cab9e91aa3951ec7ec3bb57767e956630e71f
 <div class='types-flex'>
-<ul ng-repeat='user in site.users'>
+<ul ng-repeat='font in site.allfonts'>
   <div class='user-box'>
-    <li class='user'>{{user.username}}</li>
+    <li class='user'>{{font.font_family}}, Times Favorited: {{font.user_id.length}}</li>
   </div>
 </ul>
 </div> -->
