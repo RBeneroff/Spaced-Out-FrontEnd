@@ -4,6 +4,7 @@
   "description": "Project Four - (front) Rails/Ruby/AngularJS",
   "main": "server.js",
   "dependencies": {
+    "bower": "^1.7.9",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "path": "^0.12.7"
@@ -14,7 +15,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "repository": {
     "type": "git",
