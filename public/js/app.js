@@ -64,6 +64,17 @@
       })
     }
 
+    this.getAllFonts = function(){
+      return $http({
+        url: `${rootUrl}/users/allfonts`,
+        method: 'GET'
+      })
+      .then(function(response){
+        console.log(response);
+        self.allfonts = response.data.users;
+      })
+    }
+
     // $http.get(`${rootUrl}/users/${self.id}/fav_fonts`)
     // .then(function(response) {
     //   console.log(response);
@@ -115,7 +126,7 @@
         url: `${rootUrl}/users/${user_id}`,
         method: 'PATCH',
         data: {pass: newInfo}
-      }) 
+      })
     }
 
     this.logout = function(user) {

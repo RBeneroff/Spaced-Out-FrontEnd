@@ -1,10 +1,14 @@
 <br>
 
 <!-- <button ng-click='site.allProfiles()' type='submit'>button</button> -->
+<button type="button" name="button" ng-click=site.getAllFonts()></button>
 <div class='types-flex'>
-<ul ng-repeat='user in site.users'>
+<ul ng-repeat='users in site.allfonts'>
   <div class='user-box'>
-    <li class='user'>{{user.username}}</li>
+    <li class='user'>{{users.username}}</li>
+    <p>
+      {{users.fav_fonts}}
+    </p>
   </div>
 </ul>
 </div>
