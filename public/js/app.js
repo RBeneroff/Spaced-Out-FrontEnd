@@ -5,8 +5,8 @@
   })
   .controller('SiteController', function($http, $state){
     var self = this;
-    // var rootUrl = 'http://localhost:3000'
-    var rootUrl = 'https://spaced-out-backend.herokuapp.com'
+    var rootUrl = 'http://localhost:3000'
+    // var rootUrl = 'https://spaced-out-backend.herokuapp.com'
 
     this.signup = function(user) {
       console.log(user);
