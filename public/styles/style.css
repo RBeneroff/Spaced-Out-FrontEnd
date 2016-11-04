@@ -1,4 +1,7 @@
+/*INDEX PAGE*/
+
 /*HOME PAGE*/
+
 .cursor{
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
@@ -33,21 +36,33 @@
 }
 
 /*PROFILE PAGE*/
+
 .choose-font {
   display: flex;
   /*justify-content: space-around;*/
   align-items:baseline;
+  padding: 2vh;
+}
+
+.text-flex {
+  display: flex;
+  flex-direction: column;
   padding: 5vh;
 }
 
 .text-container {
-  width: 80%;
-  margin: 0 0 0 7vh;
-  /*padding: 10vh;*/
+  /*width: 70%;*/
+  /*margin: 0 0 0 7vh;*/
+  padding: 2vh 0 0 0;
 }
 
 .example-font {
   /*width: 90%;*/
+}
+
+.fav-size {
+  display: flex;
+  justify-content: space-between;
 }
 
 .fav {
@@ -56,6 +71,36 @@
 
 .dropdown {
   /*width: 70%;*/
+  /*padding: 2vh;*/
+}
+
+.font-container {
+  width: 50%;
+}
+
+.size-input {
+  padding: 2vh;
+}
+
+.example-text {
+  width: 40vh;
+  height: 10vh;
+  border:1px solid #263238;
+  text-align: center;
+  outline: none;
+  overflow: auto;
+  padding: 10px;
+}
+
+.example-text2 {
+  width: 40vh;
+  height: 10vh;
+  /*border:1px solid #263238;*/
+  text-align: center;
+  outline: none;
+  overflow: auto;
+  padding: 10px;
+  border: none;
 }
 
 /*LOGIN PAGE */
