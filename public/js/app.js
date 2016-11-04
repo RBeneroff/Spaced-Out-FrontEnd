@@ -123,5 +123,6 @@
       $state.go('home', {url: '/'})
     }
 
+    this.newInfo = {};
   }); //controller closure
 })()
