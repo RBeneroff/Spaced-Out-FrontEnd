@@ -115,7 +115,7 @@
         url: `${rootUrl}/users/${user_id}`,
         method: 'PATCH',
         data: {pass: newInfo}
-      }) 
+      })
     }
 
     this.logout = function(user) {
