@@ -1,3 +1,23 @@
+/*ALL OVER */
+
+body {
+font-family: 'Exo 2', sans-serif;
+}
+
+/*.input-field:focus,*/
+#input:focus,
+#input1:focus,
+#input2:focus,
+#input3:focus,
+#input4:focus,
+#input5:focus,
+#input6:focus,
+#input7:focus {
+  border-bottom: 1px solid #78909c;
+  box-shadow: 0 1px 0 0 #78909c;
+  color: #78909c;
+}
+
 /*INDEX PAGE*/
 
 /*HOME PAGE*/
@@ -36,6 +56,10 @@
 }
 
 /*PROFILE PAGE*/
+
+.profile-header {
+  text-align: center;
+}
 
 .choose-font {
   display: flex;
@@ -103,6 +127,10 @@
   border: none;
 }
 
+#icon-padding {
+  padding: 2vh;
+}
+
 /*LOGIN PAGE */
 
 .container {
@@ -138,3 +166,5 @@
 .user-box:hover {
   background: gray;
 }
+
+/*CHANGE PASS PAGE*/

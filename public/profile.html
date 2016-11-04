@@ -3,14 +3,15 @@
     $('.collapsible').collapsible();
   });
 </script>
-<br>
+
+<br><br>
 <div class='container'>
-<h2>Browse our fonts:</h2>
+<h4 class='profile-header'>Browse fonts. Add to Favorites.</h4>
 <div class='choose-font'>
 <jd-fontselect class='blue-grey lighten-5' class='dropdown' state='myStateObject' stack="myFontStack" ng-model='user.favorite'></jd-fontselect>
 
 <div class='text-flex'>
-<textarea class='example-text' ng-model='site.repeatText' placeholder="Write your sample text in here">
+<textarea class='example-text' ng-model='site.repeatText' placeholder="Write your sample text in here. See it below.">
 </textarea>
 <div class='text-container'>
 <textarea readonly class='example-text2' style="font-family: {{myFontStack}};font-size:{{site.fontSize}}px" ng-model='site.repeatText'>
@@ -18,9 +19,9 @@
 </div>
 <br><br>
 <div class='fav-size'>
-<button class="waves-effect waves-light blue-grey lighten-3 btn" type='submit' ng-click='site.addToFavorites(myFontStack, site.user.id)'> Favorite</button>
+<button class="waves-effect waves-light blue-grey lighten-3 btn" type='submit' ng-click='site.addToFavorites(myFontStack, site.user.id)'>Favorite</button>
 <div class='font-container'>
-<input class='size-input' type='number' name='fontSize' min='4' max='72' ng-model='site.fontSize' placeholder='Change Your Font Size'>
+<input class='size-input' id='input5' type='number' name='fontSize' min='4' max='72' ng-model='site.fontSize' placeholder='Change Your Font Size'>
 </div></div>
 
 </div>
@@ -34,7 +35,9 @@
       <div class="collapsible-header" ng-click="site.showFavorites(site.user.id)"><i class="material-icons" class="blue-text text-darken-2">star border</i>Favorite Fonts</div>
       <div class="collapsible-body">
         <ul ng-repeat='font in site.fonts track by $index'>
-          <li style="font-family: {{font.font_family}};">{{font.font_family}}<div class="chip" style="font-family: Roboto">Delete<i class="close material-icons" ng-click='site.deleteFavorite(site.user.id, site.fonts[$index].id)'>close</i></div></li>
+          <li  id='icon-padding' style="font-family: {{font.font_family}};">{{font.font_family}}
+
+            <a class="btn-floating btn-small waves-effect waves-light blue-grey lighten-3" ng-click='site.deleteFavorite(site.user.id, site.fonts[$index].id)'><i class="material-icons">close</i></a></li>
         </ul>
       </div>
     </li>
