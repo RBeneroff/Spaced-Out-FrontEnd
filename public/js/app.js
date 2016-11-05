@@ -5,8 +5,8 @@
   })
   .controller('SiteController', function($http, $state){
     var self = this;
-    // var rootUrl = 'http://localhost:3000'
-    var rootUrl = 'https://spaced-out-backend.herokuapp.com'
+    var rootUrl = 'http://localhost:3000'
+    // var rootUrl = 'https://spaced-out-backend.herokuapp.com'
 
     this.signup = function(user) {
       console.log(user);
@@ -125,6 +125,7 @@
     this.logout = function(user) {
       console.log('logout>>>', user);
       self.user = null;
+      self.repeatText = "";
       localStorage.removeItem('token')
       $state.go('home', {url: '/'})
     }
