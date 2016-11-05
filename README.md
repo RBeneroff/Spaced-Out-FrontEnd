@@ -2,6 +2,7 @@
 Project Four - (front) Rails/Ruby/AngularJS
 
 http://spaced-out.herokuapp.com/
+
 https://spaced-out-backend.herokuapp.com/users
 
 Technologies used: Rails, Ruby, AngularJS, Javascript, jQuery, HTML, CSS, Google Fonts API, Express, NodeJS, Materialize (and full CRUD functionality with RESTful routes)
@@ -16,8 +17,8 @@ Unsolved problems:
 - Favorited users on Profile page
 
 Wireframes:
-http://i.imgur.com/gs8ZOjq.png
-http://i.imgur.com/Av2EAG9.png
-http://i.imgur.com/4Ip1abb.png
-http://i.imgur.com/AoBkH9I.png
-http://i.imgur.com/jGN2KzT.png
+- http://i.imgur.com/gs8ZOjq.png
+- http://i.imgur.com/Av2EAG9.png
+- http://i.imgur.com/4Ip1abb.png
+- http://i.imgur.com/AoBkH9I.png
+- http://i.imgur.com/jGN2KzT.png
