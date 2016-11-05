@@ -16,9 +16,11 @@
         data: {user: user}
       })
       .then(function(response) {
-        // $state.go('profile', {url: '/profile'});
-        // console.log('self', self);
         console.log(response);
+        if (response.data.status === 200) {
+          console.log('success');
+          self.success = true;
+        }
       })
       .catch(function(err) {
         console.log(err);

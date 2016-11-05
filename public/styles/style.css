@@ -23,20 +23,30 @@ background: linear-gradient( white , #b0bec5); /* W3C, IE 10+/ Edge, Firefox 16+
   color: #78909c;
 }
 
-::-webkit-input-placeholder {
-   color: white;
+#input,
+#input1,
+#input2,
+#input3,
+#input4,
+#input5,
+#input6,
+#input7 {
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 white;
+  color: white;
 }
 
-:-moz-placeholder { /* Firefox 18- */
-   color: white;
+#label,
+#label1 {
+  color: white;
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
-   color: white;
-}
-
-:-ms-input-placeholder {
-   color: white;
+#label2,
+#label3,
+#label4,
+#label5,
+#label6 {
+  color: gray;
 }
 
 /*INDEX PAGE*/
