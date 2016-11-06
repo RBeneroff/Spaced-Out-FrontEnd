@@ -18,8 +18,10 @@
     <link rel="stylesheet" href="scripts/jqcloud2/dist/jqcloud.min.css">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:200" rel="stylesheet">
     <link rel="stylesheet" href="scripts/animate.css/animate.min.css">
+    <link type="text/css" rel="stylesheet" href="/scripts/angular-flash-alert/dist/angular-flash.min.css" />
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="/scripts/angular-flash-alert/dist/angular-flash.min.js"></script>
     <script src="js/router.js"></script>
     <script src="js/app.js"></script>
   </head>
@@ -44,4 +46,5 @@
         <div ui-view></div>
     </div>
   </body>
+  <footer id="footnoteid"><flash-message duration = "7000" show-close = 'true'></flash-message></footer>
 </html>

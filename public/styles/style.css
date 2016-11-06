@@ -255,3 +255,11 @@ background: linear-gradient( white , #b0bec5); /* W3C, IE 10+/ Edge, Firefox 16+
   height: 700px;
   width: 700px;
 }
+
+
+
+#footnoteid {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

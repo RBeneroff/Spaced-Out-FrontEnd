@@ -20,6 +20,7 @@
         if (response.data.status === 200) {
           console.log('success');
           self.success = true;
+          login(self.signed);
         }
       })
       .catch(function(err) {
@@ -28,12 +29,14 @@
     }
 
     this.login = function(user) {
+      self.signed = user;
       return $http({
         url: `${rootUrl}/users/login`,
         method: 'POST',
         data: {user: user}
       })
       .then(function(response) {
+        passAlert('<strong>Success!</strong> Hi there, ' + response.data.user.username + '.')
         console.log(response);
         self.user = response.data.user;
         self.id = response.data.user.id;
@@ -116,6 +119,7 @@
       })
       .then(function(response) {
         self.newInfo = {};
+        infoAlert('Password updated!')
         $state.go('profile', {url: '/profile', user: response.data.user});
         console.log(response);
       })
@@ -128,8 +132,9 @@
       console.log('logout>>>', user);
       self.user = null;
       self.repeatText = "";
-      localStorage.removeItem('token')
-      $state.go('home', {url: '/'})
+      localStorage.removeItem('token');
+      warnAlert('You have been logged out.');
+      $state.go('home', {url: '/'});
     }
 
     this.newInfo = {};
@@ -150,5 +155,6 @@
     function warnAlert(msg){
       var id = Flash.create('warning', msg, 7000, {class: 'flashAlert'}, true);
     }
+
   }); //controller closure
 })()
