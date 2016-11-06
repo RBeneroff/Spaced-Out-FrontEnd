@@ -20,7 +20,10 @@
     "angular-ui-router": "^0.3.1",
     "jqcloud2": "^2.0.2",
     "typed.js": "^1.1.4",
-    "angular-flash-alert": "^2.3.0"
+    "angular-flash-alert": "^2.3.0",
+    "materialize": "^0.97.8",
+    "jquery": "^3.1.1",
+    "animate.css": "^3.5.2"
   },
   "resolutions": {
     "angular": "^1.5.8"
