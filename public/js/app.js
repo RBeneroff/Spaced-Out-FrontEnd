@@ -10,6 +10,7 @@
 
     this.signup = function(user) {
       console.log(user);
+      self.signed = user;
       return $http({
         url: `${rootUrl}/users`,
         method: 'POST',
@@ -20,7 +21,7 @@
         if (response.data.status === 200) {
           console.log('success');
           self.success = true;
-          login(self.signed);
+          self.login(self.signed);
         }
       })
       .catch(function(err) {
@@ -29,15 +30,14 @@
     }
 
     this.login = function(user) {
-      self.signed = user;
       return $http({
         url: `${rootUrl}/users/login`,
         method: 'POST',
         data: {user: user}
       })
       .then(function(response) {
-        passAlert('<strong>Success!</strong> Hi there, ' + response.data.user.username + '.')
         console.log(response);
+        passAlert('<strong>Success!</strong> Hi there, ' + response.data.user.username + '.')
         self.user = response.data.user;
         self.id = response.data.user.id;
         // console.log(self.user);
