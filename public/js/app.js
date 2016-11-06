@@ -22,6 +22,13 @@
           console.log('success');
           self.success = true;
           self.login(self.signed);
+        } else {
+          console.log(response)
+          if (response.data.user.email_address) {
+          failAlert('Registration failed. Email ' + response.data.user.email_address[0]);
+        } else if (response.data.user.username) {
+          failAlert('Registration failed. Username '+ response.data.user.username[0]);
+        }
         }
       })
       .catch(function(err) {
