@@ -142,6 +142,7 @@
     this.logout = function(user) {
       console.log('logout>>>', user);
       self.user = null;
+      self.success = null;
       self.repeatText = "";
       localStorage.removeItem('token');
       warnAlert('You have been logged out.');
