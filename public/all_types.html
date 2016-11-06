@@ -1,11 +1,59 @@
-<br>
+<script>
+var words = [
+  {text: "Aladin", weight: 13},
+  {text: "Salsa", weight: 10.5},
+  {text: "Puritan", weight: 9.4},
+  {text: "Delius", weight: 8},
+  {text: "Gruppo", weight: 6.2},
+  {text: "Mogra", weight: 5},
+  {text: "Lalezar", weight: 5},
+  {text: "Sura", weight: 7},
+  {text: "Play", weight: 11},
+  {text: "Unlock", weight: 10.5},
+  {text: "Quicksand", weight: 9.4},
+  {text: "Stoke", weight: 8},
+  {text: "Oxygen", weight: 6.2},
+  {text: "Exo 2", weight: 5},
+  {text: "Chewy", weight: 5},
+  {text: "Atomic Age", weight: 7},
+  {text: "Oxygen", weight: 13},
+  {text: "Shanti", weight: 10.5},
+  {text: "Times New Roman", weight: 9.4},
+  {text: "Hero", weight: 8},
+  {text: "Work Sans", weight: 6.2},
+  {text: "PT Sans Narrow", weight: 5},
+  {text: "Yatra One", weight: 5},
+  {text: "Iceberg", weight: 7},
+  {text: "Coda", weight: 12},
+  {text: "Monda", weight: 10.5},
+  {text: "Coiny", weight: 9.4},
+  {text: "Actor", weight: 8},
+  {text: "Karma", weight: 6.2},
+  {text: "Rubik", weight: 5},
+  {text: "Slackey", weight: 5},
+  {text: "Rock Salt", weight: 7},
+  {text: "Spaced Out", weight: 16},
+];
+$('#demo').jQCloud(words, {
+  delay: 500,
+  colors: ["#37474f", "#263238", "#455a64", "#546e7a", "#607d8b", "#78909c"],
+  fontSize: {
+    from: 0.1,
+    to: 0.02
+  }
+});
+</script>
 
-<!-- <button ng-click='site.allProfiles()' type='submit'>button</button> -->
-<button type="button" name="button" ng-click=site.getAllFonts()></button>
+<div id='demo'></div>
+
+
+
+<!-- <button type="button" name="button" ng-click=site.getAllFonts()></button>
+>>>>>>> eb9cab9e91aa3951ec7ec3bb57767e956630e71f
 <div class='types-flex'>
 <ul ng-repeat='font in site.allfonts'>
   <div class='user-box'>
     <li class='user'>{{font.font_family}}, Times Favorited: {{font.user_id.length}}</li>
   </div>
 </ul>
-</div>
+</div> -->
