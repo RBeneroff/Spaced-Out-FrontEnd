@@ -36,6 +36,10 @@
         data: {user: user}
       })
       .then(function(response) {
+        if (response.data.status == 401){
+          failAlert('Unauthorized! Check your username and password!')
+          self.user.password = '';
+        }
         console.log(response);
         passAlert('<strong>Success!</strong> Hi there, ' + response.data.user.username + '.')
         self.user = response.data.user;
