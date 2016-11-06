@@ -3,10 +3,11 @@
 body {
 font-family: 'Exo 2', sans-serif;
 color: #263238;
-height: 100vh;
+height: 140vh;
 /*position: absolute;*/
 background: -webkit-linear-gradient( white , #b0bec5); /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient( white , #b0bec5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-repeat: no-repeat;
 }
 
 /*.input-field:focus,*/
