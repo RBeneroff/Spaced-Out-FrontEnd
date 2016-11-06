@@ -1,6 +1,6 @@
 (function() {
   angular
-    .module('FontsApp', ['ui.router', 'jdFontselect'])
+    .module('FontsApp', ['ui.router', 'jdFontselect', 'ngFlash'])
     .config(MainRouter);
 
   MainRouter.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];

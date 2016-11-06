@@ -3,7 +3,7 @@
   .module('FontsApp').constant('jdFontselectConfig', {
     googleApiKey: 'AIzaSyDsXH0e36tnmTKXR3zbLOwM01iztXu28iE'
   })
-  .controller('SiteController', function($http, $state){
+  .controller('SiteController', function($http, $state, Flash){
     var self = this;
     var rootUrl = 'http://localhost:3000'
     // var rootUrl = 'https://spaced-out-backend.herokuapp.com'
@@ -134,5 +134,22 @@
     }
 
     this.newInfo = {};
+
+    //Flash stuff here
+    function passAlert(msg){
+      var id = Flash.create('success', msg, 7000, {class: 'flashAlert'}, true);
+    }
+
+    function failAlert(msg){
+      var id = Flash.create('danger', msg, 7000, {class: 'flashAlert'}, true);
+    }
+
+    function infoAlert(msg){
+      var id = Flash.create('info', msg, 7000, {class: 'flashAlert'}, true);
+    }
+
+    function warnAlert(msg){
+      var id = Flash.create('warning', msg, 7000, {class: 'flashAlert'}, true);
+    }
   }); //controller closure
 })()
