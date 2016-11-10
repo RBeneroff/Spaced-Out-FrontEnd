@@ -3,7 +3,7 @@ Project Four - (front) Rails/Ruby/AngularJS
 
 http://spaced-out.herokuapp.com/
 
-https://spaced-out-backend.herokuapp.com/users
+https://spaced-out-backend.herokuapp.com/users (https://github.com/Splitbreed/TypescriptAPI GitHub Repo)
 
 Technologies used: Rails, Ruby, AngularJS, PostgreSQL, Javascript, jQuery, HTML, CSS, Google Fonts API, Express, NodeJS, Materialize (and full CRUD functionality with RESTful routes)
 
